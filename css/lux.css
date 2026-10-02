@@ -368,3 +368,22 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto!
   .bk,.glow,.bokeh span,.hero-bg img,.hero-name,.badge i,.float-book,.cue i{animation:none!important}
 }
 @media (hover:none){.btn::before{display:none}}
+
+/* ---- Book page responsive fixes ---- */
+.spr-grid .pcard.ph .frame{aspect-ratio:4/5;padding:0}
+.spr-grid .pcard.ph .frame img{width:100%;height:100%;object-fit:cover;aspect-ratio:auto}
+@media (max-width:1100px){
+  .bhero .hero-copy{grid-column:1/13}
+  .bhero-title{font-size:clamp(3.2rem,9vw,6rem)}
+  .spr-grid .pcard.ph{grid-column:span 4}
+}
+@media (max-width:640px){
+  .bhero .hero-copy{grid-column:1/13;max-width:none}
+  .bhero-title{font-size:clamp(3.2rem,16vw,4.8rem)}
+  .bhero .btn-row .btn{flex:1 1 100%}
+  .spr-grid .pcard.ph{grid-column:span 12}
+  .spr-grid .pcard.ph .frame{aspect-ratio:5/4}
+  .spr-grid .pcard.ph .frame img{object-position:center}
+  .desc-art{max-width:100%}
+  .pubgrid{gap:.8rem}
+}
